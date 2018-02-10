@@ -16,6 +16,10 @@ import {
   styleUrls: ['./data-form.component.css']
 })
 export class DataFormComponent implements OnInit {
+  // adicionar em export class
+  resolved(captchaResponse: string) {
+    console.log(`Resolved captcha with response ${captchaResponse}:`);
+  }
 
   // variáveis
   formulario: FormGroup;      // representa o formulario

@@ -124,11 +124,17 @@
       </app-campo-control-erro>  
     </div>
   </div>
-
+  <div class="col-md-4 mb-3" style="margin-top: 1%">
+      <!--Exibir o recaptcha na tela, utilizando uma Key gerada pelo site: https://www.google.com/recaptcha/intro/android.html-->
+      <re-captcha (resolved)="resolved($event)" siteKey="6LeijUUUAAAAAK8zFgoDtrAXl04LXoGKYClsF4_w"></re-captcha>
+    </div>
   </div>
 
-  <button type="submit" class="btn btn-primary" style="margin-top: 2%"
-    [disabled]="!f.valid">Submit</button>
-
-  <app-form-debug [form]="f"></app-form-debug>
+  <div class="col-sm-12" style="margin-top: 1%">
+    <button type="submit" class="btn btn-primary" style="margin-top: 2%"
+      [disabled]="!f.valid">Submit</button>
+  </div>
+  
+  <!--Para realizar o Debug-->
+  <!--<app-form-debug [form]="f"></app-form-debug>-->
 </form>
